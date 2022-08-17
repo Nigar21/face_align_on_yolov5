@@ -16,7 +16,7 @@ class Yolo_align:
             for i in lm[0]:
                 x = i[0]
                 y = i[1]
-                original_img = cv2.circle(original_img, (x, y), 5, (0,255,0), -1)
+                original_img = cv2.circle(original_img, (x, y), 3, (0,255,0), -1)
         lm = lm[0]
         left_eye, right_eye = lm[0], lm[1]
         nose = lm[2]
@@ -78,9 +78,10 @@ class Yolo_align:
 
 if __name__=='__main__':
     aligner = Yolo_align()
-    global path;    path = 'anne_hathaway.jpg'
+    global path;    path = 'matthew_mcconaughey.jpg'
     start_time = time.time()
     original_img=cv2.imread(path)#np.array(Image.open('anne.jpg'))
+    # original_img = cv2.resize(original_img, (640, 640))
     aligner.rotate(original_img=original_img)
     print("--- %s seconds ---" % (time.time() - start_time))
     
