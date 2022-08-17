@@ -12,11 +12,11 @@ class Yolo_align:
         bboxes,points = model.predict(original_img)
         for box,lm in zip(bboxes, points):
             x1,y1,x2,y2 = box[0]
-    # original_img = cv2.rectangle(original_img,(x1,y1),(x2,y2),(255,0,0),3)
+            # original_img = cv2.rectangle(original_img,(x1,y1),(x2,y2),(255,0,0),3)
             for i in lm[0]:
                 x = i[0]
                 y = i[1]
-                original_img = cv2.circle(original_img, (x, y), 3, (0,255,0), -1)
+                original_img = cv2.circle(original_img, (x, y), 4, (0,255,0), -1)
         lm = lm[0]
         left_eye, right_eye = lm[0], lm[1]
         nose = lm[2]
@@ -78,7 +78,7 @@ class Yolo_align:
 
 if __name__=='__main__':
     aligner = Yolo_align()
-    global path;    path = 'matthew_mcconaughey.jpg'
+    global path;    path = 'anne_hathaway.jpg'
     start_time = time.time()
     original_img=cv2.imread(path)#np.array(Image.open('anne.jpg'))
     # original_img = cv2.resize(original_img, (640, 640))
