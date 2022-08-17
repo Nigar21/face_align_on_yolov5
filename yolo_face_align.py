@@ -16,7 +16,7 @@ class Yolo_align:
             for i in lm[0]:
                 x = i[0]
                 y = i[1]
-                original_img = cv2.circle(original_img, (x, y), 4, (0,255,0), -1)
+                original_img = cv2.circle(original_img, (x, y), 5, (0,255,0), -1)
         lm = lm[0]
         left_eye, right_eye = lm[0], lm[1]
         nose = lm[2]
