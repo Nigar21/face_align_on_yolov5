@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-# face_aligner_with_yolov5
-=======
-<<<<<<< HEAD
-# face_aligner_with_yolov5
-=======
-# Yolov5 Face Detection
+# Face roll score fixing with Yolov5 Face Detection
 
 ## Description
 The project is a wrap over [yolov5-face](https://github.com/deepcam-cn/yolov5-face) repo. Model detects faces on images and returns bounding boxes and coordinates of 5 facial keypoints, which can be used for face alignment. Taking the keypoints, we measure the roll alignment for a given face, and correct it using cosine rule. 
@@ -19,15 +13,12 @@ You can use any model from [yolov5-face](https://github.com/deepcam-cn/yolov5-fa
 
 
 ## Result example
-<img src="/anne_hatheway.jpg" width="360"/>
-<img src="/matthew_mcconaughey.jpg" width="360"/>
-<img src="/anne_hatheway_aligned.jpg" width="360"/>
-<img src="/matthew_mcconaughey_aligned.jpg" width="360"/>
+<img src="/anne_hatheway.jpg" width="480"/> <img src="/anne_hatheway_aligned.jpg" width="480"/>
+<img src="/matthew_mcconaughey.jpg" width="360"/> <img src="/matthew_mcconaughey_aligned.jpg" width="360"/>
+
 
 ## Citiation
 Thanks [deepcam-cn](https://github.com/deepcam-cn/yolov5-face) for pretrained models.
 
 Thanks [elyha7](https://github.com/elyha7/yoloface) for detailed repo on yolov5-face  
 
->>>>>>> Initial Commit
->>>>>>> My Commit
