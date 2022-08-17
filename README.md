@@ -13,8 +13,8 @@ You can use any model from [yolov5-face](https://github.com/deepcam-cn/yolov5-fa
 
 
 ## Result example
-<img src="/annehathaway.jpg" width="360"/> 
-<img src="/matthewmcconaughey.jpg" width="360"/> 
+<img src="/annehathaway.png" width="360"/> 
+<img src="/matthewmcconaughey.png" width="360"/> 
 
 
 ## Citiation
