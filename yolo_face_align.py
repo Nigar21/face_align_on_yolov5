@@ -16,7 +16,7 @@ class Yolo_align:
             for i in lm[0]:
                 x = i[0]
                 y = i[1]
-                original_img = cv2.circle(original_img, (x, y), 3, (0,255,0), -1)
+                original_img = cv2.circle(original_img, (x, y), 5, (0,255,0), -1)
         lm = lm[0]
         left_eye, right_eye = lm[0], lm[1]
         nose = lm[2]
@@ -68,14 +68,17 @@ class Yolo_align:
         original_img = Image.fromarray(original_img)
         aligned_img = np.array(original_img.rotate(angle))[...,::1]
         plt.imshow(cv2.cvtColor(aligned_img, cv2.COLOR_BGR2RGB))
+        plt.xticks([])
+        plt.yticks([])
         plt.savefig(path.split('.')[0] + '_aligned.jpg')
         return aligned_img
     
 
 
+
 if __name__=='__main__':
     aligner = Yolo_align()
-    global path;    path = 'matthew_mcconaughey.jpg'
+    global path;    path = 'anne_hathaway.jpg'
     start_time = time.time()
     original_img=cv2.imread(path)#np.array(Image.open('anne.jpg'))
     aligner.rotate(original_img=original_img)
